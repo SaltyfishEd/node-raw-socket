@@ -76,6 +76,12 @@ private:
 
 	static NAN_METHOD(GetOption);
 
+	static NAN_METHOD(BindToAddress);
+#ifdef __linux__
+	static NAN_METHOD(BindToDevice);
+#endif
+
+
 	static NAN_METHOD(New);
 
 	static void OnClose (uv_handle_t *handle);
